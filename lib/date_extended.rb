@@ -1,12 +1,26 @@
-require "date_extended/version"
-require 'date'
 class Date
-  def self.current_year
-    Date.today.year
-  end
-  def self.first_friday(month, year = Date.today.year)
-    day = Date.new(year, month, 1)
-    day = day + ((day.wday - 5) % 7)
-    day
+  class << self
+    def year
+      Date.today.year
+    end
+    
+    def month
+      Date.today.month
+    end
+    
+    def first_friday(month, year = Date.year)
+      day = Date.new(year, month, 1)
+      day = day + ((5 - day.wday) % 7)
+    end
+    
+    def last_friday(month, year = Date.year)
+      day = Date.new(year, month, -1)
+      day - ((2 + day.wday) % 7)
+    end
+    
+    def last_sunday(month, year = Date.year)
+      day = Date.new(year, month, -1)
+      day - day.wday 
+    end
   end
 end
