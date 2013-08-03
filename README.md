@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use as regular Date class with extra methods like
+
+		Date.year will give the current year
+		
+		Date.month will give the current month
 
 ## Contributing
 
