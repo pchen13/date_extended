@@ -1,3 +1,5 @@
+require 'date'
+
 class Date
   class << self
     def year

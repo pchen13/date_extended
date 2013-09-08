@@ -18,11 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-Use as regular Date class with extra methods like
+Require as regular Date class with extra methods:
 
-		Date.year will give the current year
+		require 'date_extended'
+
+		Date.year # It will give the current year
 		
-		Date.month will give the current month
+		Date.month # It will give the current month
 
 ## Contributing
 
